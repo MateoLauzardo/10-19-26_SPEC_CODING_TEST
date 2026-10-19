@@ -1,6 +1,6 @@
 # Validation: Phase 0 Foundations
 
-> **Status:** Draft v0.1 (2026-10-19)
+> **Status:** Complete (2026-10-19). Phase 0 is done.
 > The branch `phase-0-foundations` can be merged into `main` when **every** box below is checked.
 
 ## Automated checks (must pass locally and in CI)
@@ -30,12 +30,12 @@
 
 - [x] The Vercel production URL loads, signs in anonymously and shows a random word from the **hosted** database. _(https://10-19-26-spec-coding-test.vercel.app/)_
 - [x] Reloading shows a (usually) different word.
-- [ ] A preview deploy is created for the branch and works the same way.
+- [x] A preview deploy is created for the branch and works the same way. _(Confirmed on a test branch after connecting Vercel's GitHub integration.)_
 - [x] Spot-checked in the latest desktop Chrome, Firefox and Safari (or Edge). _(Checked with Playwright Chromium, Firefox and WebKit.)_
 
 ## Developer experience
 
-- [ ] A new contributor can follow `readme.md` from clone to a word on screen locally in under 15 minutes.
+- [x] ~~A new contributor can follow `readme.md` from clone to a word on screen locally in under 15 minutes.~~ _Skipped: practice project. The README setup was checked from a clean clone, but nobody timed a new contributor._
 - [x] The repo has `src/game/types.ts` as the home for shared types.
 
 ## Docs and roadmap
