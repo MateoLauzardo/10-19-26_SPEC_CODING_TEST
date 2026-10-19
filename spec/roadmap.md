@@ -8,7 +8,7 @@
 - [x] Scaffold React + Vite + TypeScript, ESLint/Prettier, Vitest, Playwright
 - [x] Create a Supabase project, wire up env config, enable anonymous auth
 - [x] Seed a starter word list of simple, drawable objects in Postgres
-- [ ] Deploy a "hello world" build to static hosting _(Vercel; pending)_
+- [x] Deploy a "hello world" build to static hosting (Vercel)
 
 ## Phase 1: MVP (core drawing round)
 
