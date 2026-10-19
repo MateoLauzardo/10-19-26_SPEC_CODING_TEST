@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import type { Database } from './database.types'
 
 type EnvName = 'VITE_SUPABASE_URL' | 'VITE_SUPABASE_ANON_KEY'
 
@@ -12,7 +13,7 @@ function requireEnv(name: EnvName): string {
   return value
 }
 
-export const supabase = createClient(
+export const supabase = createClient<Database>(
   requireEnv('VITE_SUPABASE_URL'),
   requireEnv('VITE_SUPABASE_ANON_KEY'),
 )
