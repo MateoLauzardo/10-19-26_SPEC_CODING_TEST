@@ -13,7 +13,7 @@
   - [x] the `getRandomWord()` unit test with a mocked client.
 - [x] `npm run build` produces `dist/` with no warnings that are treated as errors.
 - [x] `npm run test:e2e` passes in Chromium, Firefox and WebKit against local Supabase. The page shows a non-empty word.
-- [ ] The GitHub Actions CI workflow is green on the PR.
+- [x] The GitHub Actions CI workflow is green on the PR. _(PRs #1 and #2: both jobs passed.)_
 
 ## Database and security
 
