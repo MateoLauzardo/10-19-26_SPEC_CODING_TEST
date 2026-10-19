@@ -54,12 +54,12 @@ To add a migration, create `supabase/migrations/<timestamp>_<name>.sql`. Every t
 
 ### Hosted project
 
-- Project ref: _TBD (record it here once the hosted project exists; never record its keys)_
+- Project ref: `rxgarlncjyzuaydunqcu` (never record its keys here)
 - Anonymous sign-ins must be enabled in the dashboard: **Authentication > Sign In / Providers > Allow anonymous sign-ins**.
 
 ```sh
 npx supabase login
-npx supabase link --project-ref <project-ref>
+npx supabase link --project-ref rxgarlncjyzuaydunqcu
 npx supabase db push --include-seed
 ```
 
