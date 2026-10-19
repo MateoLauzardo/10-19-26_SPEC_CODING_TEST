@@ -5,10 +5,10 @@
 
 ## Phase 0: Foundations
 
-- [ ] Scaffold React + Vite + TypeScript, ESLint/Prettier, Vitest, Playwright
-- [ ] Create a Supabase project, wire up env config, enable anonymous auth
-- [ ] Seed a starter word list of simple, drawable objects in Postgres
-- [ ] Deploy a "hello world" build to static hosting
+- [x] Scaffold React + Vite + TypeScript, ESLint/Prettier, Vitest, Playwright
+- [ ] Create a Supabase project, wire up env config, enable anonymous auth _(local done; hosted project pending)_
+- [x] Seed a starter word list of simple, drawable objects in Postgres
+- [ ] Deploy a "hello world" build to static hosting _(Vercel; pending)_
 
 ## Phase 1: MVP (core drawing round)
 
@@ -57,5 +57,5 @@
 ## Open questions
 
 - Stakeholder input in `readme.md` hasn't been reviewed yet. Reconcile this roadmap once it's available.
-- Hosting provider (Vercel or Netlify)?
+- ~~Hosting provider (Vercel or Netlify)?~~ **Resolved:** Vercel (see `spec/2026-10-19-foundations/requirements.md`).
 - Maximum players per room (proposed: 8)?
