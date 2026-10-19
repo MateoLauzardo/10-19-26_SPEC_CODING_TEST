@@ -13,7 +13,7 @@
   - [x] the `getRandomWord()` unit test with a mocked client.
 - [x] `npm run build` produces `dist/` with no warnings that are treated as errors.
 - [x] `npm run test:e2e` passes in Chromium, Firefox and WebKit against local Supabase. The page shows a non-empty word.
-- [ ] The GitHub Actions CI workflow is green on the PR.
+- [x] The GitHub Actions CI workflow is green on the PR. _(PRs #1 and #2: both jobs passed.)_
 
 ## Database and security
 
@@ -23,15 +23,15 @@
 - [x] An **unauthenticated** request (anon key, no session) cannot read `words`.
 - [x] An **anonymous-auth** session can `SELECT` from `words`.
 - [x] An anonymous-auth session **cannot** `INSERT`, `UPDATE` or `DELETE` on `words`.
-- [ ] No service-role key appears in the repo, the client bundle or the Vercel client env (`grep -r service_role` over `src/` and `dist/` finds nothing).
+- [x] No service-role key appears in the repo, the client bundle or the Vercel client env (`grep -r service_role` over `src/` and `dist/` finds nothing).
 - [x] `.env.local` is git-ignored, and `.env.example` is committed.
 
 ## Deployment
 
-- [ ] The Vercel production URL loads, signs in anonymously and shows a random word from the **hosted** database.
-- [ ] Reloading shows a (usually) different word.
+- [x] The Vercel production URL loads, signs in anonymously and shows a random word from the **hosted** database. _(https://10-19-26-spec-coding-test.vercel.app/)_
+- [x] Reloading shows a (usually) different word.
 - [ ] A preview deploy is created for the branch and works the same way.
-- [ ] Spot-checked in the latest desktop Chrome, Firefox and Safari (or Edge).
+- [x] Spot-checked in the latest desktop Chrome, Firefox and Safari (or Edge). _(Checked with Playwright Chromium, Firefox and WebKit.)_
 
 ## Developer experience
 
@@ -40,7 +40,7 @@
 
 ## Docs and roadmap
 
-- [ ] The Phase 0 items are ticked in `spec/roadmap.md`.
+- [x] The Phase 0 items are ticked in `spec/roadmap.md`.
 - [x] The roadmap's hosting open question is resolved (Vercel).
 - [x] Any change from `plan.md` (for example, mocking Supabase in CI e2e tests) is written down in `requirements.md`.
 
