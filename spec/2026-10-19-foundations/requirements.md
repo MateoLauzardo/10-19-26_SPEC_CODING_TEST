@@ -57,6 +57,19 @@ Set up the project skeleton, tooling, backend and deployment pipeline so Phase 1
 - **Anyone can read the full word list** once they have an anonymous session. This is accepted for Phases 0–3 and fixed in Phase 4.
 - **CI needs Docker** for local Supabase during e2e tests. If that proves too slow, e2e tests in CI can mock Supabase. Write that decision down if it happens.
 
+## Changes from plan.md
+
+Recorded during implementation (2026-10-19):
+
+- **TypeScript is pinned to `~6.0`.** The Vite template now ships TypeScript 7, but `typescript-eslint` only supports `<6.1`. Move to 7 when `typescript-eslint` supports it.
+- **Separate `format:check` script.** `npm run format -- --check` would still write files and always exit 0, because `format` passes `--write`. CI and validation use `npm run format:check` instead.
+- **The Supabase CLI is a dev dependency** (`npx supabase`), locally and in CI, instead of a global install and `supabase/setup-cli` in CI. One CLI version stays pinned in `package-lock.json`.
+- **Table grants are locked down as well as RLS.** The migration revokes all privileges on `words` from `anon` and `authenticated`, then grants only `SELECT` to `authenticated`. Requests with no session get "permission denied" instead of an empty list.
+- **The local anonymous sign-in rate limit is raised** from 30 to 1000 per hour in `config.toml`, so repeated local and CI e2e runs don't hit it. The hosted project keeps its own setting.
+- **CI e2e tests run against a real local Supabase** (not mocked). The job starts only the services the app needs (database, auth, REST API, gateway) to stay fast.
+- **The seed has 105 words.**
+- **`.gitattributes` forces LF line endings,** so Prettier passes on Windows clones that use `core.autocrlf`.
+
 ## Open questions
 
 - Who owns the hosted Supabase project and the Vercel project (which org or account)?
