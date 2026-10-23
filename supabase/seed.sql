@@ -1,6 +1,8 @@
 -- About 100 simple, drawable nouns: lowercase, singular, no duplicates.
 insert into public.words (word) values
+  ('anchor'),
   ('apple'),
+  ('ball'),
   ('banana'),
   ('bed'),
   ('bell'),
@@ -52,7 +54,6 @@ insert into public.words (word) values
   ('frog'),
   ('ghost'),
   ('giraffe'),
-  ('anchor'),
   ('guitar'),
   ('hammer'),
   ('hat'),
@@ -86,7 +87,6 @@ insert into public.words (word) values
   ('rainbow'),
   ('robot'),
   ('rocket'),
-  ('ball'),
   ('shark'),
   ('sheep'),
   ('shoe'),
