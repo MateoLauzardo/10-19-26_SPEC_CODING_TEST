@@ -9,6 +9,10 @@ concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
+# The jobs only read the repo; uploading artifacts does not need a write scope.
+permissions:
+  contents: read
+
 jobs:
   checks:
     name: Lint, typecheck, unit tests, build
