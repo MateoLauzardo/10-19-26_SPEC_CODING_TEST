@@ -30,4 +30,10 @@ describe('App', () => {
     render(<App />)
     expect(await screen.findByRole('alert')).toHaveTextContent('offline')
   })
+
+  it('shows an error that is not an Error instance', async () => {
+    vi.mocked(getRandomWord).mockRejectedValue('timed out')
+    render(<App />)
+    expect(await screen.findByRole('alert')).toHaveTextContent('timed out')
+  })
 })
