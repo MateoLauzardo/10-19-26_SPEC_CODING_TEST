@@ -82,4 +82,17 @@ describe('getRandomWord', () => {
 
     await expect(getRandomWord()).rejects.toThrow('The word list is empty.')
   })
+
+  it('throws when counting the words fails', async () => {
+    auth.getSession.mockResolvedValue({
+      data: { session: {} },
+      error: null,
+    } as never)
+    from.mockReturnValue({
+      select: () =>
+        Promise.resolve({ count: null, error: new Error('permission denied') }),
+    } as never)
+
+    await expect(getRandomWord()).rejects.toThrow('permission denied')
+  })
 })
